@@ -21,7 +21,7 @@ test("passing 100000000 should return 27:46:40.00", () => {
 });
 
 test("passing negative numbers should return 00:00.00", () => {
-  expect(formatElapsedTime(100000000)).toBe("27:46:40.00");
+  expect(formatElapsedTime(-12312)).toBe("00:00.00");
 });
 
 test("passing 120000 should return 02:00.00", () => {

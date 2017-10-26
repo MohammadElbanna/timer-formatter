@@ -2,6 +2,9 @@ function formatElapsedTime(elapsedMilliseconds) {
   if (!Number.isFinite(elapsedMilliseconds)) {
     return "00:00:00";
   }
+  if (elapsedMilliseconds < 0) {
+    return "00:00.00";
+  }
 
   const hours = Math.floor(elapsedMilliseconds / (1000 * 60 * 60));
   const minutes = Math.floor(
